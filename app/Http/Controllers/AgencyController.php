@@ -49,18 +49,9 @@ class AgencyController extends Controller
         return view("agency.list", ["agencies"=>$agencies]);
     }
 
-    // public function newView()
-    // {
-    //     $agencies=Agency::all();
-    //     $=Book::all();
-    //     return view("copy.new", ["users"=>$users, "books"=>$books]);
-    // }
-
-    // public function editView($id)
-    // {
-    //     $users = User::all();
-    //     $books = Book::all();
-    //     $copies = Copy::find($id);
-    //     return view("copy.edit", ["users"=>$users, "books"=>$books, "Copy"=>$copies]);
-    // }
+    public function newView()
+    {
+        $agencies=Agency::all();
+        return view("agency.new", ["agencies"=>$agencies]);
+    }
 }
